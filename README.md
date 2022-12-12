@@ -174,7 +174,6 @@ As contributors and maintainers to this project, you are expected to abide by pa
 <img src="/branding/logo/primary/numpylogo.svg" width="300">
 </h1><br>
 
-
 [![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](
 https://numfocus.org)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/numpy.svg?label=PyPI%20downloads)](
@@ -305,3 +304,237 @@ Create a simple plot.
 - Matplotlib: Visualization with Python, available in https://matplotlib.org/
 
 - Codebasics youtube channel, Matplotlib Tutorial, available in https://www.youtube.com/watch?v=qqwf4Vuj8oM&list=PLeo1K3hjS3uu4Lr8_kro2AqaO6CFYgKOl&index=1
+
+<img src="https://raw.githubusercontent.com/mwaskom/seaborn/master/doc/_static/logo-wide-lightbg.svg"><br>
+
+--------------------------------------
+
+seaborn: statistical data visualization
+=======================================
+
+[![PyPI Version](https://img.shields.io/pypi/v/seaborn.svg)](https://pypi.org/project/seaborn/)
+[![License](https://img.shields.io/pypi/l/seaborn.svg)](https://github.com/mwaskom/seaborn/blob/master/LICENSE)
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.03021/status.svg)](https://doi.org/10.21105/joss.03021)
+[![Tests](https://github.com/mwaskom/seaborn/workflows/CI/badge.svg)](https://github.com/mwaskom/seaborn/actions)
+[![Code Coverage](https://codecov.io/gh/mwaskom/seaborn/branch/master/graph/badge.svg)](https://codecov.io/gh/mwaskom/seaborn)
+
+Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
+
+
+Documentation
+-------------
+
+Online documentation is available at [seaborn.pydata.org](https://seaborn.pydata.org).
+
+The docs include a [tutorial](https://seaborn.pydata.org/tutorial.html), [example gallery](https://seaborn.pydata.org/examples/index.html), [API reference](https://seaborn.pydata.org/api.html), [FAQ](https://seaborn.pydata.org/faq), and other useful information.
+
+To build the documentation locally, please refer to [`doc/README.md`](doc/README.md).
+
+Dependencies
+------------
+
+Seaborn supports Python 3.7+ and no longer supports Python 2.
+
+Installation requires [numpy](https://numpy.org/), [pandas](https://pandas.pydata.org/), and [matplotlib](https://matplotlib.org/). Some advanced statistical functionality requires [scipy](https://www.scipy.org/) and/or [statsmodels](https://www.statsmodels.org/).
+
+
+Installation
+------------
+
+The latest stable release (and required dependencies) can be installed from PyPI:
+
+    pip install seaborn
+
+It is also possible to include optional statistical dependencies (only relevant for v0.12+):
+
+    pip install seaborn[stats]
+
+Seaborn can also be installed with conda:
+
+    conda install seaborn
+
+Note that the main anaconda repository lags PyPI in adding new releases, but conda-forge (`-c conda-forge`) typically updates quickly.
+
+Citing
+------
+
+A paper describing seaborn has been published in the [Journal of Open Source Software](https://joss.theoj.org/papers/10.21105/joss.03021). The paper provides an introduction to the key features of the library, and it can be used as a citation if seaborn proves integral to a scientific publication.
+
+Testing
+-------
+
+Testing seaborn requires installing additional dependencies; they can be installed with the `dev` extra (e.g., `pip install .[dev]`).
+
+To test the code, run `make test` in the source directory. This will exercise the unit tests (using [pytest](https://docs.pytest.org/)) and generate a coverage report.
+
+Code style is enforced with `flake8` using the settings in the [`setup.cfg`](./setup.cfg) file. Run `make lint` to check. Alternately, you can use `pre-commit` to automatically run lint checks on any files you are committing: just run `pre-commit install` to set it up, and then commit as usual going forward.
+
+Development
+-----------
+
+Seaborn development takes place on Github: https://github.com/mwaskom/seaborn
+
+Please submit bugs that you encounter to the [issue tracker](https://github.com/mwaskom/seaborn/issues) with a reproducible example demonstrating the problem. Questions about usage are more at home on StackOverflow, where there is a [seaborn tag](https://stackoverflow.com/questions/tagged/seaborn).
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/scikit-learn/scikit-learn/main/doc/logos/scikit-learn-logo.png"><br>
+</div>
+
+  :target: https://scikit-learn.org/
+
+**scikit-learn** is a Python module for machine learning built on top of
+SciPy and is distributed under the 3-Clause BSD license.
+
+The project was started in 2007 by David Cournapeau as a Google Summer
+of Code project, and since then many volunteers have contributed. See
+the `About us <https://scikit-learn.org/dev/about.html#authors>`__ page
+for a list of core contributors.
+
+It is currently maintained by a team of volunteers.
+
+Website: https://scikit-learn.org
+
+Installation
+------------
+
+Dependencies
+~~~~~~~~~~~~
+
+scikit-learn requires:
+
+- Python (>= |PythonMinVersion|)
+- NumPy (>= |NumPyMinVersion|)
+- SciPy (>= |SciPyMinVersion|)
+- joblib (>= |JoblibMinVersion|)
+- threadpoolctl (>= |ThreadpoolctlMinVersion|)
+
+=======
+
+**Scikit-learn 0.20 was the last version to support Python 2.7 and Python 3.4.**
+scikit-learn 1.0 and later require Python 3.7 or newer.
+scikit-learn 1.1 and later require Python 3.8 or newer.
+
+Scikit-learn plotting capabilities (i.e., functions start with ``plot_`` and
+classes end with "Display") require Matplotlib (>= |MatplotlibMinVersion|).
+For running the examples Matplotlib >= |MatplotlibMinVersion| is required.
+A few examples require scikit-image >= |Scikit-ImageMinVersion|, a few examples
+require pandas >= |PandasMinVersion|, some examples require seaborn >=
+|SeabornMinVersion| and plotly >= |PlotlyMinVersion|.
+
+User installation
+~~~~~~~~~~~~~~~~~
+
+If you already have a working installation of numpy and scipy,
+the easiest way to install scikit-learn is using ``pip``::
+
+    pip install -U scikit-learn
+
+or ``conda``::
+
+    conda install -c conda-forge scikit-learn
+
+The documentation includes more detailed `installation instructions <https://scikit-learn.org/stable/install.html>`_.
+
+
+Changelog
+---------
+
+See the `changelog <https://scikit-learn.org/dev/whats_new.html>`__
+for a history of notable changes to scikit-learn.
+
+Development
+-----------
+
+We welcome new contributors of all experience levels. The scikit-learn
+community goals are to be helpful, welcoming, and effective. The
+`Development Guide <https://scikit-learn.org/stable/developers/index.html>`_
+has detailed information about contributing code, documentation, tests, and
+more. We've included some basic information in this README.
+
+Important links
+~~~~~~~~~~~~~~~
+
+- Official source code repo: https://github.com/scikit-learn/scikit-learn
+- Download releases: https://pypi.org/project/scikit-learn/
+- Issue tracker: https://github.com/scikit-learn/scikit-learn/issues
+
+Source code
+~~~~~~~~~~~
+
+You can check the latest sources with the command::
+
+    git clone https://github.com/scikit-learn/scikit-learn.git
+
+Contributing
+~~~~~~~~~~~~
+
+To learn more about making a contribution to scikit-learn, please see our
+`Contributing guide
+<https://scikit-learn.org/dev/developers/contributing.html>`_.
+
+Testing
+~~~~~~~
+
+After installation, you can launch the test suite from outside the source
+directory (you will need to have ``pytest`` >= |PyTestMinVersion| installed)::
+
+    pytest sklearn
+
+See the web page https://scikit-learn.org/dev/developers/contributing.html#testing-and-improving-test-coverage
+for more information.
+
+    Random number generation can be controlled during testing by setting
+    the ``SKLEARN_SEED`` environment variable.
+
+Submitting a Pull Request
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Before opening a Pull Request, have a look at the
+full Contributing page to make sure your code complies
+with our guidelines: https://scikit-learn.org/stable/developers/index.html
+
+Project History
+---------------
+
+The project was started in 2007 by David Cournapeau as a Google Summer
+of Code project, and since then many volunteers have contributed. See
+the `About us <https://scikit-learn.org/dev/about.html#authors>`__ page
+for a list of core contributors.
+
+The project is currently maintained by a team of volunteers.
+
+**Note**: `scikit-learn` was previously referred to as `scikits.learn`.
+
+Help and Support
+----------------
+
+Documentation
+~~~~~~~~~~~~~
+
+- HTML documentation (stable release): https://scikit-learn.org
+- HTML documentation (development version): https://scikit-learn.org/dev/
+- FAQ: https://scikit-learn.org/stable/faq.html
+
+Communication
+~~~~~~~~~~~~~
+
+- Mailing list: https://mail.python.org/mailman/listinfo/scikit-learn
+- Gitter: https://gitter.im/scikit-learn/scikit-learn
+- Logos & Branding: https://github.com/scikit-learn/scikit-learn/tree/main/doc/logos
+- Blog: https://blog.scikit-learn.org
+- Calendar: https://blog.scikit-learn.org/calendar/
+- Twitter: https://twitter.com/scikit_learn
+- Twitter (commits): https://twitter.com/sklearn_commits
+- Stack Overflow: https://stackoverflow.com/questions/tagged/scikit-learn
+- Github Discussions: https://github.com/scikit-learn/scikit-learn/discussions
+- Website: https://scikit-learn.org
+- LinkedIn: https://www.linkedin.com/company/scikit-learn
+- YouTube: https://www.youtube.com/channel/UCJosFjYm0ZYVUARxuOZqnnw/playlists
+- Facebook: https://www.facebook.com/scikitlearnofficial/
+- Instagram: https://www.instagram.com/scikitlearnofficial/
+- TikTok: https://www.tiktok.com/@scikit.learn
+
+Citation
+~~~~~~~~
+
+If you use scikit-learn in a scientific publication, we would appreciate citations: https://scikit-learn.org/stable/about.html#citing-scikit-learn
